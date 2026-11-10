@@ -1,0 +1,3 @@
+$ node evidencias/actividad_10_w3schools_array_pop.js
+Resultado: ["Banana","Orange"]
+Cantidad de elementos: 2

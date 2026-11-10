@@ -1,0 +1,27 @@
+ACTIVIDAD 16 — REVISIÓN LOCAL PARA PUBLICAR EN GITHUB
+MARÍA JOSÉ GIRÓN TOL — 1090-23-15450
+
+Rama actual
+main
+
+Historial local (4 commits)
+620f562 Documenta práctica Git con capturas y evidencias
+7b3f2fe Integra JavaScript, API y documentación de prácticas
+fbc0852 Completa formulario HTML y estilos adaptables
+c69b9a7 Agrega estructura inicial del proyecto
+
+Remoto configurado
+(sin remoto, aún no publicado)
+
+Archivos obligatorios
+server.js — ENCONTRADO
+public — ENCONTRADO
+README.md — ENCONTRADO
+bitacora.md — ENCONTRADO
+
+Exclusiones .gitignore
+node_modules/
+.env
+.DS_Store
+
+PUBLICACIÓN EN GITHUB: PENDIENTE (no hay repositorio remoto conectado).

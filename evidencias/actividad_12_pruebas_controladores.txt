@@ -1,0 +1,55 @@
+$ node --test pruebas/actividad_12.test.js
+TAP version 13
+# Subtest: GET devuelve 200 y [] antes de registrar personas
+ok 1 - GET devuelve 200 y [] antes de registrar personas
+  ---
+  duration_ms: 6.335918
+  type: 'test'
+  ...
+# Subtest: POST válido crea la inscripción con 201 y GET la muestra
+ok 2 - POST válido crea la inscripción con 201 y GET la muestra
+  ---
+  duration_ms: 2.359456
+  type: 'test'
+  ...
+# Subtest: POST sin teléfono responde 400 y no crea un registro
+ok 3 - POST sin teléfono responde 400 y no crea un registro
+  ---
+  duration_ms: 2.132723
+  type: 'test'
+  ...
+# Subtest: POST con correo inválido devuelve 400
+ok 4 - POST con correo inválido devuelve 400
+  ---
+  duration_ms: 8.722748
+  type: 'test'
+  ...
+# Subtest: POST con espacios en un campo obligatorio devuelve 400
+ok 5 - POST con espacios en un campo obligatorio devuelve 400
+  ---
+  duration_ms: 3.322628
+  type: 'test'
+  ...
+# Subtest: POST con req.body ausente devuelve 400, no falla
+ok 6 - POST con req.body ausente devuelve 400, no falla
+  ---
+  duration_ms: 1.848909
+  type: 'test'
+  ...
+# Subtest: POST elimina espacios exteriores antes de guardar
+ok 7 - POST elimina espacios exteriores antes de guardar
+  ---
+  duration_ms: 3.242739
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 181.215096
+
+Nota: Express fue simulado solo para llamar a los controladores. No se probó el servidor HTTP ni npm install.

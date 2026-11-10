@@ -1,0 +1,18 @@
+ACTIVIDAD 10 — COMPROBACIÓN LOCAL DE CÓDIGO
+
+Práctica JavaScript ejecutada con Node.js:
+Participantes: Ana López, Luis Pérez, Marta García
+Total de inscripciones: 3
+
+W3Schools — ejercicio seleccionado, código equivalente ejecutado localmente:
+Resultado: ["Banana","Orange"]
+Cantidad de elementos: 2
+
+Práctica CodePen equivalente ejecutada realmente en Chromium (HTML+CSS+JS):
+- Elementos de la lista: Ana López, Luis Pérez, Marta García
+- Texto mostrado en <p>: Total de inscripciones: 3
+- Versión móvil: 412×968 px, sin desbordamiento horizontal = True
+- Proyecto principal: Total de inscripciones de ejemplo: 3
+- El botón de práctica DOM previa sigue funcionando: 1 clic -> contador 1.
+
+Advertencia: estas son pruebas locales. NO confirman que el ejercicio haya sido enviado en W3Schools o publicado en CodePen/OneCompiler.

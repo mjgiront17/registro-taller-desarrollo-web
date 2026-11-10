@@ -1,0 +1,24 @@
+ACTIVIDAD 15 - EJECUCION LOCAL DE GIT
+Estudiante: María José Girón Tol
+Carné: 1090-23-15450
+
+$ git --version
+git version 2.47.3
+
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+$ git log --oneline
+7b3f2fe Integra JavaScript, API y documentación de prácticas
+fbc0852 Completa formulario HTML y estilos adaptables
+c69b9a7 Agrega estructura inicial del proyecto
+
+$ git check-ignore -v .env node_modules/archivo-ejemplo.js
+.gitignore:2:.env	.env
+.gitignore:1:node_modules/	node_modules/archivo-ejemplo.js
+
+$ git remote -v
+(Sin repositorio remoto configurado: GitHub pendiente)
+
+Nota: las pruebas fueron realizadas en un entorno de práctica, no en el equipo personal.

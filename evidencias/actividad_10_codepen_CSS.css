@@ -1,0 +1,8 @@
+/* Actividad 10: pegar en el panel CSS de CodePen */
+body { margin: 0; padding: 30px; background: #ecf6f3; font-family: Arial, sans-serif; color: #1b3141; }
+.actividad10 { max-width: 590px; margin: 30px auto; background: white; padding: 26px; border: 2px solid #80c9b2; border-radius: 16px; box-shadow: 0 10px 30px #1b31411a; }
+.actividad10 h1 { margin: 0 0 15px; }
+.actividad10-etiqueta { color: #087e83; font-weight: bold; }
+.actividad10 li { padding: 7px 0; }
+#inscripciones-total { margin: 18px 0 0; padding: 15px; background: #d8f2ed; color: #06656b; font-size: 20px; font-weight: bold; border-radius: 8px; }
+@media (max-width: 640px) { body { padding: 12px; } .actividad10 { padding: 18px; margin: 12px auto; } }

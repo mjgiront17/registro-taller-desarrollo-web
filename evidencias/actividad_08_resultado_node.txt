@@ -1,0 +1,7 @@
+Comando: node evidencias/actividad_08_variables_y_suma.js
+
+Prediccion de la suma: 12
+Resultado de 7 + 5: 12
+Inscritos tras una alta: 1
+hayCupo() con 20 inscritos: false
+Inscritos tras intentar agregar al llegar a 20: 20

@@ -1,0 +1,43 @@
+$ node pruebas/mostrar_respuestas.js
+
+1. GET inicial
+HTTP 200
+[]
+
+2. POST válido
+HTTP 201
+{
+  "id": 1,
+  "nombre": "Ana López",
+  "correo": "ana.lopez@example.com",
+  "telefono": "5550-0123",
+  "taller": "HTML y CSS",
+  "horario": "Sábado de 9:00 a 11:00"
+}
+
+3. GET tras registrar
+HTTP 200
+[
+  {
+    "id": 1,
+    "nombre": "Ana López",
+    "correo": "ana.lopez@example.com",
+    "telefono": "5550-0123",
+    "taller": "HTML y CSS",
+    "horario": "Sábado de 9:00 a 11:00"
+  }
+]
+
+4. POST sin teléfono
+HTTP 400
+{
+  "mensaje": "Completa los cinco campos obligatorios."
+}
+
+5. POST correo inválido
+HTTP 400
+{
+  "mensaje": "Ingresa un correo electrónico válido."
+}
+
+Resultados del código de server.js a través de rutas simuladas; no corresponde a solicitudes HTTP reales.

@@ -1,0 +1,9 @@
+Actividad 11 — comprobación local del entorno de prueba
+$ node -v
+v22.16.0
+$ npm -v
+10.9.2
+$ node --check server.js
+(sin salida; revisión de sintaxis correcta)
+
+Esta verificación no corresponde al equipo personal de la estudiante.

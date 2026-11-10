@@ -1,0 +1,9 @@
+VERIFICACIÓN FINAL — 10 de noviembre de 2026
+Entorno: Node.js 24.22.1, Express real, SQLite integrado.
+Comando: node --test pruebas/final.test.js
+Resultado: PASS, 1 prueba de integración, 0 fallos.
+Cobertura comprobada: GET vacío; POST de 2 registros; 30 rechazos de validación en POST/PUT; datos no guardados al ser inválidos; PUT de fila correcta; DELETE; 400 por id inválido; 404 por fila inexistente; 400 por JSON mal formado; total y agrupaciones SQL; persistencia después de detener y reiniciar el servidor.
+La base temporal se eliminó al finalizar. La base de demostración local es independiente.
+Navegador: creación real de Ana Ejemplo, edición de nivel Inicial a Intermedio, lista y reportes actualizados. Pantalla de 412 px: una columna, ancho de documento 397 px, sin desbordamiento horizontal.
+Capturas final_escritorio.jpg y final_movil.jpg: datos ficticios del servidor local.
+GitHub: pendiente. No se realizó publicación.

@@ -1,0 +1,61 @@
+ACTIVIDAD 14 · SQL · MARÍA JOSÉ GIRÓN TOL · 1090-23-15450
+Ejecución REAL local con SQLite (módulo sqlite3 de Python). No es una captura del sitio SQLite Fiddle.
+
+======================================================================
+1 · CREATE TABLE — crear estructura
+CREATE TABLE talleres (
+    id INTEGER PRIMARY KEY,
+    nombre TEXT NOT NULL,
+    horario TEXT
+);
+Estado: EJECUTADO CORRECTAMENTE
+
+======================================================================
+2 · INSERT — ingresar taller ficticio
+INSERT INTO talleres (nombre, horario) VALUES ('Desarrollo Web', 'Tarde');
+Estado: EJECUTADO CORRECTAMENTE
+
+======================================================================
+3 · SELECT — revisar inscripción
+SELECT id, nombre, horario FROM talleres;
+Estado: EJECUTADO CORRECTAMENTE
+Resultado:
+id | nombre          | horario
+ 1 | Desarrollo Web  | Tarde
+
+======================================================================
+4 · UPDATE — cambiar horario
+UPDATE talleres SET horario = 'Noche' WHERE id = 1;
+Estado: EJECUTADO CORRECTAMENTE
+
+======================================================================
+5 · SELECT — comprobar cambio
+SELECT id, nombre, horario FROM talleres;
+Estado: EJECUTADO CORRECTAMENTE
+Resultado:
+id | nombre          | horario
+ 1 | Desarrollo Web  | Noche
+
+======================================================================
+6 · DELETE — eliminar id = 1
+DELETE FROM talleres WHERE id = 1;
+Estado: EJECUTADO CORRECTAMENTE
+
+======================================================================
+7 · SELECT — comprobar eliminación
+SELECT id, nombre, horario FROM talleres;
+Estado: EJECUTADO CORRECTAMENTE
+Resultado:
+(0 filas)
+
+======================================================================
+Ejemplo de error de sintaxis (de la captura)
+SELECT * talleres;
+Error esperado: near "talleres": syntax error
+
+======================================================================
+Consulta corregida
+SELECT * FROM talleres;
+Estado: EJECUTADO CORRECTAMENTE
+Resultado:
+(0 filas)

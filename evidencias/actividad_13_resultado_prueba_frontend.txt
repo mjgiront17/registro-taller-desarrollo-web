@@ -1,0 +1,9 @@
+Actividad 13 — Pruebas de la interfaz con respuesta de API simulada en navegador
+
+Solicitud POST simulada: /api/inscripciones
+Datos: Sofía López | sofia.lopez@example.com | 5555 1234 | JavaScript | Sábado de 9:00 a 11:00
+Resultado: HTTP 201 (simulado)
+Mensaje mostrado: Inscripción creada correctamente para Sofía López (HTTP 201).
+GET posterior: arreglo con 1 registro; la lista se redibuja sin recargar.
+
+Estas pruebas verifican lógica de frontend; Express no se ejecutó, ya que no hay dependencias instaladas.

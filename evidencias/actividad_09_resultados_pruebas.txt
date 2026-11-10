@@ -1,0 +1,9 @@
+Actividad 09 — DOM y eventos
+OK: formulario y panel DOM encontrados.
+OK: submit procesó el nombre ficticio Ana López (ejemplo), imprimió en consola y no recargó la página.
+OK: tres clics cambiaron el contador de 0 a 3.
+OK: evento input mostró el nombre ficticio escrito sin recarga.
+OK: no hay desbordamiento horizontal en pantalla de 412 px.
+
+Salida de consola:
+Actividad 09 — Nombre del formulario: Ana López (ejemplo)

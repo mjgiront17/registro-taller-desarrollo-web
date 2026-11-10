@@ -1,0 +1,27 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Actividad 08 — Práctica JS</title><style>
+body {margin:0;background:#f3f6fb;font:16px/1.5 system-ui,-apple-system,sans-serif;color:#172b45; padding:38px;}
+main{background:white;border:1px solid #d8e2ef; border-radius:18px; max-width:900px; margin:0 auto; padding:32px; box-shadow:0 14px 45px #172b4520;}
+h1{font-size:28px;margin:0 0 4px}p{margin:0 0 22px;color:#5d6e83}h2{font-size:16px;margin:20px 0 9px}pre{background:#10233b;color:#ecf7ff;padding:18px;border-radius:12px;font:14px/1.5 ui-monospace,monospace;overflow:auto;white-space:pre-wrap}.ok{background:#e5f7ee;color:#155b3e;padding:14px;border-radius:10px}.foot{font-size:13px;color:#687a8b;margin-top:16px}
+</style></head><body><main><h1>Actividad 08 — JavaScript</h1><p>Variables, suma y verificación de cupos · demostración local</p><h2>Código de prueba</h2><pre>const numero1 = 7;
+const numero2 = 5;
+const suma = numero1 + numero2;
+console.log(suma); // Predicción: 12
+
+const cuposMaximos = 20;
+let inscritos = 0;
+function hayCupo() { return inscritos &lt; cuposMaximos; }
+if (hayCupo()) inscritos++;
+inscritos = 20; // Reto: ¿queda algún cupo?</pre><h2>Resultados calculados por JavaScript</h2><pre class="ok" id="results">Ejecutando…</pre><p class="foot">Prueba local generada para la bitácora; no es una captura del video de YouTube.</p></main><script>
+const numero1=7,numero2=5,suma=numero1+numero2,cuposMaximos=20;
+let inscritos=0;
+const hayCupo=()=>inscritos<cuposMaximos;
+if(hayCupo())inscritos++;
+const primera=inscritos;
+inscritos=20;const quedaCupo=hayCupo();
+if (hayCupo())inscritos++;
+document.getElementById('results').textContent=`Predicción de la suma: 12
+Resultado real: ${suma}
+Inscritos después de una inscripción: ${primera}
+hayCupo() con 20 inscritos: ${quedaCupo}
+Inscritos después de intentar agregar otro: ${inscritos}`;
+</script></body></html>

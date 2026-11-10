@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demostración local — soluciones Flexbox (niveles 1 a 8)</title>
+<style>
+:root{font-family:system-ui,Arial,sans-serif;color:#1b2b40;background:#f0f4f7}*{box-sizing:border-box}
+body{margin:0}.stripe{background:#143b3f;color:#fff;padding:17px 28px;font-size:15px}
+.page{padding:28px;max-width:1120px;margin:auto}.warn{background:#fff2cc;color:#644f13;border-left:4px solid #dba524;padding:10px 15px;font-size:14px;border-radius:5px}
+header h1{font-size:30px;margin:5px 0 7px;color:#182a40}header p{margin:0 0 23px;color:#5d6b7e}
+.content{display:grid;grid-template-columns:370px 1fr;gap:20px;align-items:stretch;margin-top:18px}
+.code{background:#19273a;color:#e9f4ff;padding:23px 24px;border-radius:15px;min-height:365px}
+.badge{font-size:12px;color:#a6e7ce;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.code h2{font-size:21px;color:white;margin:12px 0 20px}.code pre{font-size:18px;line-height:1.65;color:#a8f2ca;white-space:pre-wrap;background:#0d1829;border-radius:12px;padding:15px}
+.code p{line-height:1.5;color:#d3dbe9;font-size:15px}
+.demo{background:#fff;padding:20px;border-radius:15px;box-shadow:0 4px 15px #15395c16}
+.demo h2{margin:4px 0 16px;font-size:18px;color:#2d455b}
+.pond{display:flex;position:relative;height:275px;padding:17px;background:#2c5f73;border-radius:15px;overflow:hidden}
+.frog{flex:0 0 72px;height:72px;display:grid;place-items:center;position:relative;z-index:1}
+.frog svg{width:67px;height:67px;filter:drop-shadow(0 4px 2px #0002)}
+.lilypad{position:absolute;background:#b5bf3f;border-radius:50%;width:78px;height:78px;opacity:.86;z-index:0}
+.demo footer{margin-top:12px;font-size:12px;color:#697f8d}
+.note{margin-top:19px;font-size:13px;color:#51637a}
+</style></head><body>
+<div class="stripe">DESARROLLO WEB · ACTIVIDAD 07 · PRÁCTICA LOCAL</div>
+<div class="page">
+<header><div class="badge" style="color:#087e83">Flexbox Froggy · Reproducción didáctica</div>
+<h1 id="title">Nivel 1 · solución CSS</h1>
+<p>Visualización de las propiedades de Flexbox para estudiar los ocho primeros niveles.</p></header>
+<div class="warn"><strong>Evidencia educativa, no captura del juego oficial.</strong> Este ejemplo ejecuta CSS localmente; no demuestra una partida completada en flexboxfroggy.com.</div>
+<div class="content"><section class="code"><div class="badge">Código aplicado a #pond</div><h2 id="subtitle">Nivel 1</h2><pre id="code"></pre><p id="desc"></p></section>
+<section class="demo"><h2>Resultado visual de la regla CSS</h2><div class="pond" id="pond"></div><footer>Prueba CSS real realizada en una página local · cambiar ?nivel=1 a ?nivel=8</footer></section></div>
+<div class="note">Guía de clase: completar al menos los primeros ocho niveles de Flexbox Froggy. Para evidencia del videojuego se requieren capturas del sitio original.</div>
+</div>
+<script>
+const data=[{"level": 1, "code": "justify-content: flex-end;", "description": "Sitúa la rana en el extremo derecho del eje principal.", "count": 1, "justify": "flex-end", "align": "flex-start", "direction": "row"}, {"level": 2, "code": "justify-content: center;", "description": "Centra las ranas horizontalmente.", "count": 2, "justify": "center", "align": "flex-start", "direction": "row"}, {"level": 3, "code": "justify-content: space-around;", "description": "Reparte espacio alrededor de cada rana.", "count": 3, "justify": "space-around", "align": "flex-start", "direction": "row"}, {"level": 4, "code": "justify-content: space-between;", "description": "Distribuye las ranas con espacio entre ellas.", "count": 3, "justify": "space-between", "align": "flex-start", "direction": "row"}, {"level": 5, "code": "align-items: flex-end;", "description": "Coloca la rana abajo, en el eje transversal.", "count": 1, "justify": "flex-start", "align": "flex-end", "direction": "row"}, {"level": 6, "code": "justify-content: center;\nalign-items: center;", "description": "Centra la rana tanto horizontal como verticalmente.", "count": 1, "justify": "center", "align": "center", "direction": "row"}, {"level": 7, "code": "justify-content: space-around;\nalign-items: flex-end;", "description": "Separa las ranas horizontalmente y las baja.", "count": 3, "justify": "space-around", "align": "flex-end", "direction": "row"}, {"level": 8, "code": "flex-direction: row-reverse;", "description": "Invierte la dirección horizontal: de derecha a izquierda.", "count": 3, "justify": "flex-start", "align": "flex-start", "direction": "row-reverse"}];
+const n=Math.max(1,Math.min(8,parseInt(new URLSearchParams(location.search).get('nivel')||'1',10)||1));
+const item=data[n-1];
+document.getElementById('title').textContent='Nivel '+n+' · solución CSS';
+document.getElementById('subtitle').textContent='Flexbox Froggy · Nivel '+n;
+document.getElementById('desc').textContent=item.description;
+document.getElementById('code').textContent='#pond {\n  display: flex;\n  '+item.code.replaceAll('\n','\n  ')+'\n}';
+const pond=document.getElementById('pond');
+pond.style.justifyContent=item.justify; pond.style.alignItems=item.align; pond.style.flexDirection=item.direction;
+const frogSvg=`<svg viewBox="0 0 100 100" role="img" aria-label="rana ilustrada" xmlns="http://www.w3.org/2000/svg"><path fill="#69ca63" stroke="#24734e" stroke-width="3" d="M17 42 Q10 25 27 23 Q34 12 42 28 Q50 19 58 27 Q67 11 75 25 Q92 26 83 44 L83 68 Q50 89 17 68Z"/><ellipse cx="32" cy="31" rx="12" ry="14" fill="#aaf19a"/><ellipse cx="69" cy="31" rx="12" ry="14" fill="#aaf19a"/><circle cx="34" cy="30" r="4" fill="#193b30"/><circle cx="68" cy="30" r="4" fill="#193b30"/><path d="M38 58 Q50 70 63 58" fill="none" stroke="#1f5c43" stroke-width="3" stroke-linecap="round"/><circle cx="49" cy="53" r="4" fill="#ea9077"/></svg>`;
+for(let i=0;i<item.count;i++){const frog=document.createElement('div');frog.className='frog';frog.innerHTML=frogSvg;pond.append(frog);}
+// Los nenúfares indican el destino coincidente con el resultado CSS, mediante posiciones reales calculadas.
+requestAnimationFrame(()=>{for(const frog of [...pond.children]){const r=frog.getBoundingClientRect(),p=pond.getBoundingClientRect();const pad=document.createElement('div');pad.className='lilypad';pad.style.left=(r.left-p.left-3)+'px';pad.style.top=(r.top-p.top-3)+'px';pad.style.width='78px';pad.style.height='78px';pond.insertBefore(pad,pond.firstChild);}})
+</script></body></html>
